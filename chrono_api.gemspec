@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "API client for chrono-api.herokuapp.com"
   spec.description   = "Timer API"
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://chrono-api.herokuapp.com"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
