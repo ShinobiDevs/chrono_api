@@ -1,6 +1,6 @@
 # ChronoApi
 
-ChronoAPI is a client interface to a simple timer API located at (https://chrono-api.herokuapp.com)[https://chrono-api.herokuapp.com].
+ChronoAPI is a client interface to a simple timer API located at [https://chrono-api.herokuapp.com](https://chrono-api.herokuapp.com).
 
 ## Installation
 
