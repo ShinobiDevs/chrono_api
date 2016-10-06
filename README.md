@@ -1,8 +1,6 @@
 # ChronoApi
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/chrono_api`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+ChronoAPI is a client interface to a simple timer API located at (https://chrono-api.herokuapp.com)[https://chrono-api.herokuapp.com].
 
 ## Installation
 
@@ -22,7 +20,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Creating a Timer
+
+```ruby
+ChronoApi.create_timer!
+# => {"uuid"=>"92e367d1480bcbe5ed72f5fb7e68e32f2353d97136eb539309330efe93b36ae2", "started_at"=>1475746749, "ended_at"=>nil, "seconds_passed"=>0}
+```
+
+### Checking a Timer
+
+```ruby
+ChronoApi.get_timer("92e367d1480bcbe5ed72f5fb7e68e32f2353d97136eb539309330efe93b36ae2")
+# => {"uuid"=>"92e367d1480bcbe5ed72f5fb7e68e32f2353d97136eb539309330efe93b36ae2", "started_at"=>1475746749, "ended_at"=>nil, "seconds_passed"=>19}
+```
+
+### Stopping a Timer
+
+```ruby
+ChronoApi.stop_timer("92e367d1480bcbe5ed72f5fb7e68e32f2353d97136eb539309330efe93b36ae2")
+# => response code 204 on success, 404 if not found
+```
+
+### Deleting a Timer
+```ruby
+ChronoApi.delete_timer("92e367d1480bcbe5ed72f5fb7e68e32f2353d97136eb539309330efe93b36ae2")
+# => response code 204 on success, 404 if not found
+```
+
 
 ## Development
 
@@ -38,4 +62,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

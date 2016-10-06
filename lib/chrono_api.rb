@@ -16,10 +16,10 @@ module ChronoApi
   end
 
   def self.stop_timer(uuid)
-    self.put("/timers/#{uuid}").parsed_response
+    self.put("/timers/#{uuid}").code
   end
 
   def self.delete_timer(uuid)
-    self.delete("/timers/#{uuis}", query: {id: uuid}).parsed_response
+    self.delete("/timers/#{uuid}", query: {id: uuid}).code
   end
 end
